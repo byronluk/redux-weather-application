@@ -1,8 +1,10 @@
+import WEATHER_API_KEY from './config';
+
 const axios = require('axios');
 
 export function updateSearchInput(input) {
   return {
-    type: 'UPDATE_EXPENSE_DESCRIPTION',
+    type: 'UPDATE_SEARCH_INPUT',
     payload: { input }
   };
 }
@@ -10,8 +12,12 @@ export function updateSearchInput(input) {
 export function searchCity(input) {
   return {
     type: 'SEARCH_CITY',
-    payload: axios.get('api.openweathermap.org/data/2.5/weather', {
-      params: 
+    payload: axios.get('http://api.openweathermap.org/data/2.5/weather', {
+      params: {
+        q: input,
+        appid: WEATHER_API_KEY,
+        units: 'imperial'
+      }
     })
-  }
+  };
 }

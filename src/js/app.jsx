@@ -1,8 +1,8 @@
 import React from 'react';
 
-import searchBar from '../components/searchBar';
-import cityInformation from '../components/cityInformation';
-import searchHistory from '../components/searchHistory';
+import SearchBar from '../components/searchBar';
+import CityInformation from '../components/cityInformation';
+import SearchHistory from '../components/searchHistory';
 
 export default class App extends React.Component {
   render() {
@@ -12,9 +12,9 @@ export default class App extends React.Component {
           <h1 className='page-title'>Weather App</h1>
           <p className='page-description'>Always know if you need an umbrella!</p>
         </div>
-        <searchBar />
-        <cityInformation />
-        <searchHistory />
+        <SearchBar />
+        <CityInformation />
+        <SearchHistory />
       </div>
     );
   }
