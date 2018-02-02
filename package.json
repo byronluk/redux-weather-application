@@ -4,7 +4,7 @@
   "description": "Base application setup for creating a new react project.",
   "main": "server/index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "npm run build node server/index.js",
     "build": "npm run less && webpack",
     "less": "lessc src/css/style.less dist/css/style.css",
     "less-watch": "less-watch-compiler src/css dist/css style.less",
