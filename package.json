@@ -4,7 +4,7 @@
   "description": "Base application setup for creating a new react project.",
   "main": "server/index.js",
   "scripts": {
-    "start": "npm run build node server/index.js",
+    "start": "npm run build && node server/index.js",
     "build": "npm run less && webpack",
     "less": "lessc src/css/style.less dist/css/style.css",
     "less-watch": "less-watch-compiler src/css dist/css style.less",
@@ -30,7 +30,6 @@
     "redux-devtools": "^3.4.0",
     "redux-promise-middleware": "^5.0.0",
     "serve-favicon": "^2.0.1",
-    "extract-text-webpack-plugin": "^3.0.2",
     "webpack": "^3.6.0"
   },
   "devDependencies": {
