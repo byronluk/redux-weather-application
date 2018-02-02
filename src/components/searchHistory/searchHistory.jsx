@@ -7,7 +7,7 @@ export default class SearchHistory extends React.Component {
 
     return (
       <div className='history-container'>
-        <h6 className='container-title'>Search History</h6>
+        <h4 className='container-title'>Search History</h4>
         <table className='history-table'>
           <tbody className='history-body'>
             { history.map((searchItem, index) => (

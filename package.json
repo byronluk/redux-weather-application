@@ -4,9 +4,10 @@
   "description": "Base application setup for creating a new react project.",
   "main": "server/index.js",
   "scripts": {
-    "build": "npm run less && webpack -w",
+    "build": "webpack -w",
     "start": "node server/index.js",
     "less": "lessc src/css/style.less dist/css/style.css",
+    "less-watch": "less-watch-compiler src/css dist/css style.less",
     "lint": "eslint .",
     "test": "npm run build && mocha test/.setup.js test/*.spec.js"
   },
@@ -29,6 +30,7 @@
     "redux-devtools": "^3.4.0",
     "redux-promise-middleware": "^5.0.0",
     "serve-favicon": "^2.0.1",
+    "extract-text-webpack-plugin": "^3.0.2",
     "webpack": "^3.6.0"
   },
   "devDependencies": {
@@ -40,6 +42,7 @@
     "babel-register": "^6.4.3",
     "chai-as-promised": "^5.3.0",
     "chai-http": "^3.0.0",
+    "css-loader": "^0.26.1",
     "csx": "^4.0.0",
     "enzyme": "^2.4.1",
     "eslint": "^3.15.0",
@@ -51,11 +54,13 @@
     "eslint-plugin-react": "^6.2.0",
     "file-loader": "^0.11.2",
     "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "less-plugin-autoprefix": "^1.5.1",
     "mocha": "^3.0.2",
     "react-addons-test-utils": "^15.6.0",
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0",
+    "style-loader": "^0.13.1",
     "url-loader": "^0.5.9"
   },
   "repository": {

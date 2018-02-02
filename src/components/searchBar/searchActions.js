@@ -1,5 +1,5 @@
 import WEATHER_API_KEY from './config';
-
+//  Import API_KEY from config.js/json
 const axios = require('axios');
 
 export function updateSearchInput(input) {

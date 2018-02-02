@@ -61,9 +61,8 @@ export default class searchBar extends React.Component {
           className='input-bar'
           onChange={ this.handleInputChange }
           value={ this.props.input }
+          placeholder='Search cities'
         />
-        { error &&
-        <p className='error-message'>{ error.message }</p>}
         <button
           className='submit-button'
           name='submit'
@@ -71,6 +70,8 @@ export default class searchBar extends React.Component {
         >
           Go!
         </button>
+        { error &&
+        <p className='error-message'>{ error.message }</p>}
       </form>
     );
   }

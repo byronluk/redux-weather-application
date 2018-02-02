@@ -12,9 +12,11 @@ export default class App extends React.Component {
           <h1 className='page-title'>Weather App</h1>
           <p className='page-description'>Always know if you need an umbrella!</p>
         </div>
-        <SearchBar />
-        <CityInformation />
-        <SearchHistory />
+        <div className='content-container'>
+          <SearchBar />
+          <CityInformation />
+          <SearchHistory />
+        </div>
       </div>
     );
   }
