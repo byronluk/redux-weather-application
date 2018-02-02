@@ -1,5 +1,8 @@
-import WEATHER_API_KEY from './config';
+// import WEATHER_API_KEY from './config';
 //  Import API_KEY from config.js/json
+//  Heroku ENV_VARIABLES
+const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
+
 const axios = require('axios');
 
 export function updateSearchInput(input) {
