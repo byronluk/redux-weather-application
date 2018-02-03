@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import SearchBar from '../components/searchBar';
 import CityInformation from '../components/cityInformation';
 import SearchHistory from '../components/searchHistory';
 
+console.log(REACT_APP_WEATHER_API_KEY);
 export default class App extends React.Component {
+  // constructor() {
+  //   super();
+  // }
   render() {
     return (
       <div className='container'>
