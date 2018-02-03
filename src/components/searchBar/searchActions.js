@@ -15,7 +15,7 @@ export function updateSearchInput(input) {
 export function searchCity(input) {
   return {
     type: 'SEARCH_CITY',
-    payload: axios.get('http://api.openweathermap.org/data/2.5/weather', {
+    payload: axios.get('https://api.openweathermap.org/data/2.5/weather', {
       params: {
         q: input,
         appid: WEATHER_API_KEY,
